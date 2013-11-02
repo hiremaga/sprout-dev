@@ -53,7 +53,7 @@ A development and automated test environment for [Sprout](https://github.com/piv
 1. Clone this repo
 
     ```
-    git clone https://github.com/hiremaga/sprout-dev
+    git clone --recursive https://github.com/hiremaga/sprout-dev
     ```
 
 1. Start vagrant using this repo's Vagrantfile
@@ -75,9 +75,12 @@ If everything is setup correctly the output should be:
 ```
 → bundle exec rspec
 
+sprout-osx-apps::chrome
+  installs Google Chrome into /Applications
+
 Command "uname"
   should return stdout "Darwin"
 
-Finished in 9.43 seconds
-1 example, 0 failures
+Finished in 5.54 seconds
+2 examples, 0 failures
 ```
