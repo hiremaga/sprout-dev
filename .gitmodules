@@ -1,0 +1,3 @@
+[submodule "sprout-cookbooks"]
+	path = sprout-cookbooks
+	url = git@github.com:pivotal-sprout/sprout

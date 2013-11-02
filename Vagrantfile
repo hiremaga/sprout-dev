@@ -9,4 +9,12 @@ Vagrant.configure('2') do |config|
     v.vmx['numvcpus'] = '1'
     v.vmx['displayName'] = 'Vagrant OSX'
   end
+
+  config.vm.provision :shell, inline: <<-BASH
+   ruby -v
+   cd /vagrant/sprout-cookbooks
+   sudo gem install bundler --no-ri --no-rdoc
+   sudo bundle
+   soloist
+  BASH
 end
