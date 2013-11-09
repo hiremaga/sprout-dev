@@ -1,5 +1,5 @@
 Vagrant.configure('2') do |config|
-  config.vm.box = 'mavericks'
+  config.vm.box = 'mountain-lion'
 
   config.vm.provider 'vmware_fusion' do |v|
     v.vmx['ethernet0.virtualDev'] = 'e1000' # Fix networking: https://groups.google.com/d/msg/vagrant-up/VyZBqzbVzvs/GzWECRRuSxgJ

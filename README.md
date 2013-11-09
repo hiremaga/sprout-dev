@@ -11,7 +11,7 @@ A development and automated test environment for [Sprout](https://github.com/piv
 1. Tim Sutton's [osx-vm-templates](https://github.com/timsutton/osx-vm-templates) for building an OSX box with Packer
 1. [ServerSpec](http://serverspec.org/)
 
-### Creating a Mavericks box for Vagrant with Packer
+### Creating a Mountain Lion box for Vagrant with Packer
 
 1. Clone Tim Sutton's [osx-vm-templates](https://github.com/timsutton/osx-vm-templates)
 
@@ -19,11 +19,11 @@ A development and automated test environment for [Sprout](https://github.com/piv
     git clone https://github.com/timsutton/osx-vm-templates
     ```
 
-1. Extract a Packer compatible image from the OS Mavericks installer
+1. Extract a Packer compatible image from the OSX Mountain Lion installer
 
     ```
     cd osx-vm-templates
-    sudo prepare_iso/prepare_iso.sh "/Applications/Install OS X Mavericks.app" out
+    sudo prepare_iso/prepare_iso.sh "/Applications/Install OS X Mountain Lion.app" out
     ```
 
     Take note of the checksum of the generated image and its full path from the output of this command, you'll need this in a moment.
@@ -45,7 +45,7 @@ A development and automated test environment for [Sprout](https://github.com/piv
 1. Add the box generated earlier to Vagrant
 
     ```
-    vagrant box add mavericks packer_vmware_vmware.box
+    vagrant box add mountain-lion packer_vmware_vmware.box
     ```
 
 ### Starting the OSX guest with Vagrant
